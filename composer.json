@@ -1,0 +1,45 @@
+{
+    "name": "tyhpdef/league-config-impl",
+    "description": "Implementation package for tyhpdef/league-config. Require tyhpdef/league-config, not this package.",
+    "keywords": [
+        "dev",
+        "static analysis",
+        "internal"
+    ],
+    "type": "library",
+    "license": "Apache-2.0",
+    "version": "1.2.0.0",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "extra": {
+        "tyhp": {
+            "interopContractVersion": 1,
+            "php-version": ">=8.2",
+            "require": {
+                "tyhpdef/php": "@dev",
+                "tyhpdef/nette-schema": "@dev",
+                "tyhpdef/nette-utils": "@dev"
+            },
+            "package": {
+                "include": [
+                    "./_tyhpdef/*.tyhpdef",
+                    "./_tyhpdef/extensions/*.tyhpdef"
+                ],
+                "overlay": [
+                    "./_tyhpdef/overlays/stubs/*.tyhpdef",
+                    "./_tyhpdef/overlays/*.tyhpdef"
+                ]
+            },
+            "public": "tyhpdef/league-config"
+        }
+    },
+    "require": {
+        "php": ">=8.2",
+        "league/config": "1.2.0"
+    },
+    "require-dev": {
+        "tyhpdef/php": "@dev",
+        "tyhpdef/nette-schema": "@dev",
+        "tyhpdef/nette-utils": "@dev"
+    }
+}
